@@ -42,7 +42,7 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_AUTH_TOKEN }}
           # Security: Allow any user to trigger triage (automated issue help is safe)
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.CI_PAT }}
           allowed_non_write_users: '*'
           # track_progress: true # Enables tracking comments
           show_full_output: ${{ github.event.repository.private }} # security: only show full output in private repos (public action logs are world-readable)
